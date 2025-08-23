@@ -8,6 +8,13 @@ export class Post extends Base{
     @Column()
     post:String
 
+@Column()
+@PrimaryGeneratedColumn()
+userId:number
+
+    @PrimaryGeneratedColumn()
+    @Column()
+    postId:number
 
     @ManyToOne(()=>User , (user)=>user.posts)
     user:User

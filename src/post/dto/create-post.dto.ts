@@ -5,5 +5,8 @@ export class CreatePostDto {
   post: string;
 
   @IsOptional()
-  userId?: number; 
+  userId?: number;
+
+  @IsOptional()
+  postId?: number;
 }

@@ -1,4 +1,4 @@
-import {Column, Entity, OneToMany} from "typeorm";
+import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from "typeorm";
 import {Base} from "../../common/base.entity";
 import {Post} from "../../post/entities/post.entity";
 
@@ -19,6 +19,8 @@ export class User extends Base{
 
    @Column()
     phone: string;
+
+
 
    @OneToMany(()=>Post, (post) => post.user)
     posts: Post[]
